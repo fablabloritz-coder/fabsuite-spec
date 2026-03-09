@@ -1,0 +1,31 @@
+{
+  "app": "fabboard",
+  "name": "FabBoard",
+  "version": "1.1.0",
+  "suite_version": "1.0.0",
+  "status": "running",
+  "description": "Dashboard TV temps réel pour le FabLab",
+  "icon": "bi-tv",
+  "color": "#6f42c1",
+  "url": "http://localhost:5580",
+  "capabilities": ["display", "tasks", "calendar", "x-weather"],
+  "widgets": [
+    {
+      "id": "active-slides",
+      "label": "Slides actifs",
+      "description": "Nombre de slides configurés sur le dashboard TV",
+      "endpoint": "/api/fabsuite/widget/active-slides",
+      "type": "counter",
+      "refresh_interval": 300
+    },
+    {
+      "id": "pending-tasks",
+      "label": "Missions en cours",
+      "description": "Tâches à faire et en cours sur le tableau des missions",
+      "endpoint": "/api/fabsuite/widget/pending-tasks",
+      "type": "counter",
+      "refresh_interval": 120
+    }
+  ],
+  "started_at": "2026-03-09T08:00:00Z"
+}

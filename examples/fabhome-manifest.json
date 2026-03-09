@@ -1,0 +1,14 @@
+{
+  "app": "fabhome",
+  "name": "FabHome",
+  "version": "2.0.0",
+  "suite_version": "1.0.0",
+  "status": "running",
+  "description": "Hub central de la FabLab Suite — portail et dashboard",
+  "icon": "bi-house-heart",
+  "color": "#fd7e14",
+  "url": "http://localhost:3000",
+  "capabilities": ["x-hub", "x-discovery", "x-notifications-aggregator"],
+  "widgets": [],
+  "started_at": "2026-03-09T08:00:00Z"
+}

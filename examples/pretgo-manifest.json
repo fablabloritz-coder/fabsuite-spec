@@ -1,0 +1,42 @@
+{
+  "app": "pretgo",
+  "name": "PretGo",
+  "version": "1.0.0",
+  "suite_version": "1.0.0",
+  "status": "running",
+  "description": "Gestion des prêts de matériel pour établissements",
+  "icon": "bi-box-arrow-right",
+  "color": "#0d6efd",
+  "url": "http://localhost:5000",
+  "capabilities": ["loans", "inventory"],
+  "widgets": [
+    {
+      "id": "active-loans",
+      "label": "Prêts en cours",
+      "description": "Nombre de prêts actuellement actifs",
+      "endpoint": "/api/fabsuite/widget/active-loans",
+      "type": "counter",
+      "refresh_interval": 120
+    },
+    {
+      "id": "overdue-loans",
+      "label": "Prêts en retard",
+      "description": "Liste des prêts dépassant la date de retour prévue",
+      "endpoint": "/api/fabsuite/widget/overdue-loans",
+      "type": "list",
+      "refresh_interval": 120
+    },
+    {
+      "id": "equipment-status",
+      "label": "État du parc",
+      "description": "Répartition des équipements par état (disponible, prêté, maintenance)",
+      "endpoint": "/api/fabsuite/widget/equipment-status",
+      "type": "chart",
+      "refresh_interval": 300
+    }
+  ],
+  "notifications": {
+    "endpoint": "/api/fabsuite/notifications",
+    "types": ["warning"]
+  }
+}

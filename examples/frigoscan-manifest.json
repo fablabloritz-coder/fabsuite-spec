@@ -1,0 +1,34 @@
+{
+  "app": "frigoscan",
+  "name": "FrigoScan",
+  "version": "1.0.0",
+  "suite_version": "1.0.0",
+  "status": "running",
+  "description": "Gestion du frigo par scan de codes-barres",
+  "icon": "bi-thermometer-snow",
+  "color": "#0dcaf0",
+  "url": "http://localhost:8000",
+  "capabilities": ["inventory", "scan", "stats"],
+  "widgets": [
+    {
+      "id": "fridge-summary",
+      "label": "Résumé du frigo",
+      "description": "Nombre de produits et produits bientôt périmés",
+      "endpoint": "/api/fabsuite/widget/fridge-summary",
+      "type": "counter",
+      "refresh_interval": 600
+    },
+    {
+      "id": "expiring-soon",
+      "label": "Bientôt périmés",
+      "description": "Produits dont la date de péremption approche",
+      "endpoint": "/api/fabsuite/widget/expiring-soon",
+      "type": "list",
+      "refresh_interval": 3600
+    }
+  ],
+  "notifications": {
+    "endpoint": "/api/fabsuite/notifications",
+    "types": ["warning"]
+  }
+}

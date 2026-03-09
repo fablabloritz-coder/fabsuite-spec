@@ -1,0 +1,51 @@
+{
+  "app": "fabtrack",
+  "name": "Fabtrack",
+  "version": "1.3.0",
+  "suite_version": "1.0.0",
+  "status": "running",
+  "description": "Suivi des consommations machines et matériaux du FabLab",
+  "icon": "bi-printer",
+  "color": "#198754",
+  "url": "http://localhost:5555",
+  "capabilities": ["stats", "machines", "consumptions"],
+  "widgets": [
+    {
+      "id": "monthly-consumptions",
+      "label": "Consommations du mois",
+      "description": "Nombre total de consommations enregistrées ce mois-ci",
+      "endpoint": "/api/fabsuite/widget/monthly-consumptions",
+      "type": "counter",
+      "refresh_interval": 300
+    },
+    {
+      "id": "machine-status",
+      "label": "État des machines",
+      "description": "Disponibilité des machines du FabLab",
+      "endpoint": "/api/fabsuite/widget/machine-status",
+      "type": "status",
+      "refresh_interval": 60
+    },
+    {
+      "id": "top-machines",
+      "label": "Top machines du mois",
+      "description": "Machines les plus utilisées ce mois-ci",
+      "endpoint": "/api/fabsuite/widget/top-machines",
+      "type": "chart",
+      "refresh_interval": 600
+    },
+    {
+      "id": "recent-activity",
+      "label": "Activité récente",
+      "description": "Dernières consommations enregistrées",
+      "endpoint": "/api/fabsuite/widget/recent-activity",
+      "type": "list",
+      "refresh_interval": 120
+    }
+  ],
+  "notifications": {
+    "endpoint": "/api/fabsuite/notifications",
+    "types": ["warning", "error"]
+  },
+  "started_at": "2026-03-09T08:00:00Z"
+}
