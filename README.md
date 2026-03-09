@@ -26,7 +26,6 @@ FabLab Suite est un écosystème d'applications web **auto-hébergées**, **grat
 | **[Fabtrack](https://github.com/fablabloritz-coder/Fabtrack)** | Suivi des consommations machines et matériaux | [GitHub](https://github.com/fablabloritz-coder/Fabtrack) |
 | **[FabBoard](https://github.com/fablabloritz-coder/FabBoard)** | Dashboard TV temps réel pour le FabLab | [GitHub](https://github.com/fablabloritz-coder/FabBoard) |
 | **[PretGo](https://github.com/fablabloritz-coder/PretGo)** | Gestion des prêts de matériel | [GitHub](https://github.com/fablabloritz-coder/PretGo) |
-| **[FrigoScan](https://github.com/fablabloritz-coder/FrigoScan)** | Gestion du frigo par scan de codes-barres | [GitHub](https://github.com/fablabloritz-coder/FrigoScan) |
 
 ## Architecture de la suite
 
@@ -38,7 +37,7 @@ FabLab Suite est un écosystème d'applications web **auto-hébergées**, **grat
                            │ Découverte & agrégation
               ┌────────┬───┴───┬────────┐
               ▼        ▼       ▼        ▼
-          Fabtrack  FabBoard  PretGo  FrigoScan ...
+          Fabtrack  FabBoard  PretGo  ...
 ```
 
 Chaque application expose un **manifest standardisé** (`/api/fabsuite/manifest`) qui permet à FabHome de :
