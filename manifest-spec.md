@@ -106,12 +106,12 @@ Un widget est un bloc d'information qu'une application propose à FabHome pour a
 
 | Type | Rendu attendu | Données retournées |
 |------|---------------|-------------------|
-| `counter` | Un chiffre avec label | `{ "value": number, "label": string, "unit": string }` |
-| `list` | Liste d'éléments | `{ "items": [{ "label": string, "value": string, "status": string }] }` |
-| `status` | Indicateur d'état | `{ "items": [{ "label": string, "status": "ok" \| "warning" \| "error" }] }` |
-| `chart` | Graphique simple | `{ "type": "bar" \| "line" \| "pie", "labels": [...], "values": [...] }` |
-| `text` | Texte libre | `{ "content": string }` |
-| `table` | Tableau de données | `{ "headers": [...], "rows": [[...], ...] }` |
+| `counter` | Un chiffre avec label | `{ "type": "counter", "value": number, "label": string, "unit": string }` |
+| `list` | Liste d'éléments | `{ "type": "list", "items": [{ "label": string, "value": string, "status": string }] }` |
+| `status` | Indicateur d'état | `{ "type": "status", "items": [{ "label": string, "status": "ok" \| "warning" \| "error" }] }` |
+| `chart` | Graphique simple | `{ "type": "chart", "chart_type": "bar" \| "line" \| "pie", "labels": [...], "values": [...] }` |
+| `text` | Texte libre | `{ "type": "text", "content": string }` |
+| `table` | Tableau de données | `{ "type": "table", "headers": [...], "rows": [[...], ...] }` |
 
 ### Notifications
 
